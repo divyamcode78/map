@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Location Based Access</title>
+    <script>
+    
+        const validUsername = "Divyam";
+        const validPassword = "1234";
+      
+
+
+        function askLocation() {
+            let location = prompt("Please enter your location:");
+
+            if (location.toLowerCase() === "punjab" || location.toLowerCase() === "haryana" || location.toLowerCase() === "chandigarh") {
+                let username = prompt("Please enter your username:");
+                let password = prompt("Please enter your password:");
+
+                if (username === validUsername && password === validPassword) {
+                    alert("Welcome!");
+                    window.location.href = "map.html"; 
+                } else {
+                    alert("Wrong credentials");
+                }
+            } else {
+                alert("Access Denied");
+            }
+        }
+    </script>
+</head>
+<body onload="askLocation()"
+    
+</body>
+</html>
